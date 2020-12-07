@@ -112,9 +112,9 @@ class SessionConfig extends AbstractBundleConfig
         }
 
         return $this->buildDataSourceName(
-            $this->get(SessionConstants::ZED_SESSION_REDIS_PROTOCOL),
-            $this->get(SessionConstants::ZED_SESSION_REDIS_HOST),
-            $this->get(SessionConstants::ZED_SESSION_REDIS_PORT),
+            $this->get(SessionConstants::ZED_SESSION_REDIS_PROTOCOL, ''),
+            $this->get(SessionConstants::ZED_SESSION_REDIS_HOST, ''),
+            $this->get(SessionConstants::ZED_SESSION_REDIS_PORT, ''),
             $this->get(SessionConstants::ZED_SESSION_REDIS_DATABASE, static::DEFAULT_REDIS_DATABASE),
             $this->get(SessionConstants::ZED_SESSION_REDIS_PASSWORD, false)
         );
@@ -198,9 +198,9 @@ class SessionConfig extends AbstractBundleConfig
         }
 
         return $this->buildDataSourceName(
-            $this->get(SessionConstants::YVES_SESSION_REDIS_PROTOCOL),
-            $this->get(SessionConstants::YVES_SESSION_REDIS_HOST),
-            $this->get(SessionConstants::YVES_SESSION_REDIS_PORT),
+            $this->get(SessionConstants::YVES_SESSION_REDIS_PROTOCOL, ''),
+            $this->get(SessionConstants::YVES_SESSION_REDIS_HOST, ''),
+            $this->get(SessionConstants::YVES_SESSION_REDIS_PORT, ''),
             $this->get(SessionConstants::YVES_SESSION_REDIS_DATABASE, static::DEFAULT_REDIS_DATABASE),
             $this->get(SessionConstants::YVES_SESSION_REDIS_PASSWORD, false)
         );
